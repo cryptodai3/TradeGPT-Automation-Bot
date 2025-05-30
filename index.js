@@ -20,6 +20,7 @@ const logger = {
   success: (msg) => console.log(`${colors.green}[✅] ${msg}${colors.reset}`),
   loading: (msg) => console.log(`${colors.cyan}[⟳] ${msg}${colors.reset}`),
   step: (msg) => console.log(`${colors.white}[➤] ${msg}${colors.reset}`);
+};
 
   function displayBanner() {
   const width = process.stdout.columns || 80;
