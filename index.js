@@ -19,7 +19,8 @@ const logger = {
   error: (msg) => console.log(`${colors.red}[✗] ${msg}${colors.reset}`),
   success: (msg) => console.log(`${colors.green}[✅] ${msg}${colors.reset}`),
   loading: (msg) => console.log(`${colors.cyan}[⟳] ${msg}${colors.reset}`),
-  step: (msg) => console.log(`${colors.white}[➤] ${msg}${colors.reset}`),
+  step: (msg) => console.log(`${colors.white}[➤] ${msg}${colors.reset}`);
+
   function displayBanner() {
   const width = process.stdout.columns || 80;
   const banner = figlet.textSync('\n KITE-AI V2', { font: "ANSI Shadow", horizontalLayout: 'Speed' });
