@@ -19,17 +19,13 @@ const logger = {
   error: (msg) => console.log(`${colors.red}[✗] ${msg}${colors.reset}`),
   success: (msg) => console.log(`${colors.green}[✅] ${msg}${colors.reset}`),
   loading: (msg) => console.log(`${colors.cyan}[⟳] ${msg}${colors.reset}`),
-  step: (msg) => console.log(`${colors.white}[➤] ${msg}${colors.reset}`);
-};
-
-  function displayBanner() {
-  const width = process.stdout.columns || 80;
-  const banner = figlet.textSync('\n KITE-AI V2', { font: "ANSI Shadow", horizontalLayout: 'Speed' });
-  banner.split('\n').forEach(line => {
-    console.log(chalk.cyanBright(line.padStart(line.length + Math.floor((width - line.length) / 2))));
-  });
-  console.log(chalk.cyanBright(' '.repeat((width - 50) / 2) + 'TradeGPT Automation Bot v1 - Created By CryptoDai3'));
-  console.log(chalk.yellowBright(' '.repeat((width - 30) / 2) + '✪ Automates swaps and chat on TradeGPT Finance ✪\n'));
+  step: (msg) => console.log(`${colors.white}[➤] ${msg}${colors.reset}`),
+  banner: () => {
+    console.log(`${colors.cyan}${colors.bold}`);
+    console.log(`---------------------------------------------`);
+    console.log(`  TradeGPT Automation Bot - Cryptodai3  `);
+    console.log(`---------------------------------------------${colors.reset}`);
+    console.log();
   }
 };
 
